@@ -1,0 +1,114 @@
+.page-banner{
+    margin: 9rem 0 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    padding: 8rem 0;
+    
+    @include lg-up {
+        padding: 10rem 0;
+    }
+    @include xl-up {
+        padding: 12rem 0;
+    }
+    @include xxl-up {
+        padding: 14rem 0;
+    }
+
+   &::before {
+       content: "";
+       position: absolute;
+       left: 0;
+       right: 0;
+       top: 0;
+       bottom: 0;
+       background: linear-gradient(90deg, rgba(3,2,3,1) 0%, rgba(35,31,32,1) 50%, rgba(34,35,31,0) 100%);
+       z-index: -1;
+   }
+  
+
+    h3{
+        color: white;
+        font-size: 6rem;
+        font-weight: 600;
+        line-height: 1.15;
+        @include sm-down {
+            font-size: 3rem;
+        }
+    }
+}
+.page-banner-slider {
+    margin: 9rem 0 0;
+    .swiper-wrapper {
+        padding-bottom: 3rem;
+    }
+
+    .swiper-slide {
+        position: relative;
+        z-index: 1;
+        padding: 8rem 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        @include lg-up {
+            padding: 10rem 0;
+        }
+        @include xl-up {
+            padding: 12rem 0;
+        }
+        @include xxl-up {
+            padding: 14rem 0;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(3,2,3,1) 0%, rgba(35,31,32,1) 50%, rgba(34,35,31,0) 100%);
+            z-index: -1;
+        }
+    } 
+    
+    .banner-content{
+        max-width: 57rem;
+    }
+
+    h3 {
+        color: white;
+        font-size: 6rem;
+        font-weight: 600;
+        line-height: 1.15;
+        @include sm-down {
+            font-size: 3rem;
+        }
+    }
+
+    .swiper-pagination {
+        width: auto;
+        line-height: 0;
+        margin: 0 auto;
+        position: relative;
+        bottom: 0;
+        .swiper-pagination-bullet {                
+            background-color: transparent;
+            opacity: 1;
+            width: 3rem;
+            height: 0.5rem;
+            border-radius: 0;
+            background-color: $color__offWhite;
+            margin: 0 .5rem;
+            @include sm-down{
+                width: 2rem;
+                height: 0.5rem;
+            }
+            &-active {
+                background-color: $color__primary;
+            }
+        }            
+    }
+}

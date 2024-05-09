@@ -1,0 +1,34 @@
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 1099;
+    background-color: $color__white;
+    @include flex-center;
+
+    .circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20rem;
+        height: 20rem;
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: .5rem solid #f3f3f3;
+            border-top: .5rem solid $color__primary;
+            border-radius: 50%;
+            animation: spin 1s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
